@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- $Id: htm-teilb.xsl 1447 2008-08-07 12:57:55Z zau $ -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:t="http://www.tei-c.org/ns/1.0"
+                xmlns:t="http://www.tei-c.org/ns/1.0" xmlns="http://www.w3.org/1999/xhtml" exclude-result-prefixes="t" 
                 version="1.0">
   <!-- Actual display and increment calculation found in teilb.xsl -->
   <xsl:import href="teilb.xsl"/>
@@ -30,7 +30,7 @@
                and preceding-sibling::node()[1][not(local-name() = 'space' or
                         local-name() = 'g' or
                         (local-name()='supplied' and @reason='lost'))]
-                        and not($leiden-style='ddbdp' and (ancestor::t:sic or ancestor::t:rdg or ancestor::t:del[ancestor::t:choice]))
+                        and not(($leiden-style = 'ddbdp' or $leiden-style = 'sammelbuch') and (ancestor::t:sic or ancestor::t:rdg or ancestor::t:del[ancestor::t:choice]))
                and not($edition-type='diplomatic')">
                <!-- print hyphen if type=inWord
                               *unless* previous line ends with space / g / supplied[reason=lost]
@@ -45,7 +45,7 @@
                   </a>
                   <!-- for the first lb in a div, create an empty anchor instead of a line-break -->
                </xsl:when>
-               <xsl:when test="$leiden-style='ddbdp' and (ancestor::t:sic or ancestor::t:rdg or ancestor::t:del[ancestor::t:choice])">
+               <xsl:when test="($leiden-style = 'ddbdp' or $leiden-style = 'sammelbuch') and (ancestor::t:sic or ancestor::t:rdg or ancestor::t:del[ancestor::t:choice])">
                   <xsl:text>|</xsl:text>
                </xsl:when>
                <xsl:otherwise>
@@ -53,13 +53,13 @@
                </xsl:otherwise>
             </xsl:choose>
             <xsl:choose>
-               <xsl:when test="not(number(@n)) and $leiden-style = 'ddbdp'">
+               <xsl:when test="not(number(@n)) and ($leiden-style = 'ddbdp' or $leiden-style = 'sammelbuch')">
                   <!--         non-numerical line-nos always printed in DDbDP         -->
                   <xsl:call-template name="margin-num"/>
                </xsl:when>
                <xsl:when test="@n mod $line-inc = 0 and not(@n = 0) and 
                   not(following::t:*[1][local-name() = 'gap' or local-name()='space'][@unit = 'line'] and 
-                  $leiden-style = 'ddbdp')">
+                  ($leiden-style = 'ddbdp' or $leiden-style = 'sammelbuch'))">
                   <!-- prints line-nos divisible by stated increment, unless zero
                      and unless it is a gap line or vacat in DDbDP -->
                   <xsl:call-template name="margin-num"/>

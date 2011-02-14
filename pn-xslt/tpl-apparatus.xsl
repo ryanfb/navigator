@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- $Id: tpl-apparatus.xsl 1447 2008-08-07 12:57:55Z zau $ -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:t="http://www.tei-c.org/ns/1.0"
+                xmlns:t="http://www.tei-c.org/ns/1.0" xmlns="http://www.w3.org/1999/xhtml" exclude-result-prefixes="t" 
                 version="1.0">
 
   <!-- Generates the apparatus from the edition -->
@@ -12,6 +12,7 @@
     2. Indicator in text: [htm | txt]-element.xsl to add call-template to [htm | txt]-tpl-apparatus.xsl for links and/or stars.
     3. Add to ddbdp-app template below using local-name() to define context
   -->
+  
 
   <!-- Defines the output of individual elements in apparatus -->
   <xsl:template name="ddbdp-app">
@@ -41,14 +42,26 @@
       <xsl:choose>
       <!-- choice -->
          <xsl:when test="local-name() = 'choice' and child::t:sic and child::t:corr">
-            <xsl:apply-templates select="t:sic/node()"/>
+
+            <xsl:choose>
+              <xsl:when test="$leiden-style = 'sammelbuch'">
+                <xsl:apply-templates select="t:corr/node()"/>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:apply-templates select="t:sic/node()"/>
+              </xsl:otherwise>
+            </xsl:choose>
+            
+            <xsl:call-template name="childCertainty"/>
             <xsl:text> pap.</xsl:text>
+
          </xsl:when>
 
          <!-- subst -->
       <xsl:when test="local-name() = 'subst'">
             <xsl:text>corr. from </xsl:text>
             <xsl:apply-templates select="t:del/node()"/>
+         <xsl:call-template name="childCertainty"/>
          </xsl:when>
 
          <!-- app -->
@@ -57,6 +70,7 @@
                <xsl:when test="@type = 'alternative'">
                   <xsl:text>or </xsl:text>
                   <xsl:apply-templates select="t:rdg/node()"/>
+                  <xsl:call-template name="childCertainty"/>
                </xsl:when>
                <xsl:when test="@type = 'editorial' or @type = 'BL' or @type = 'SoSOL'">
                   <xsl:if test="@type = 'BL'">
@@ -194,5 +208,11 @@
       <xsl:param name="trans-text" select="."/>
       <xsl:value-of select="translate($trans-text, $all-grc, $grc-lower-strip)"/>
   </xsl:template>
+   
+   <xsl:template name="childCertainty">
+      <xsl:if test="child::t:certainty[@match='..']">
+         <xsl:text>(?)</xsl:text>
+      </xsl:if>
+   </xsl:template>
 
 </xsl:stylesheet>

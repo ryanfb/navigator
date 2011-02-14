@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- $Id: teiaddanddel.xsl 1510 2008-08-14 15:27:51Z zau $ -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-   xmlns:t="http://www.tei-c.org/ns/1.0" version="1.0">
+   xmlns:t="http://www.tei-c.org/ns/1.0" xmlns="http://www.w3.org/1999/xhtml" exclude-result-prefixes="t"  version="1.0">
    <!-- Contains templates for subst, add and del -->
 
    <xsl:template match="t:subst">
@@ -18,7 +18,7 @@
 
    <xsl:template match="t:add">
       <xsl:choose>
-         <xsl:when test="$leiden-style = 'ddbdp'">
+         <xsl:when test="($leiden-style = 'ddbdp' or $leiden-style = 'sammelbuch')">
             <xsl:choose>
                <xsl:when test="parent::t:subst"/>
                <xsl:when test="@place = 'above'">
@@ -45,7 +45,7 @@
       <xsl:call-template name="cert-low"/>
 
       <xsl:choose>
-         <xsl:when test="$leiden-style = 'ddbdp'">
+         <xsl:when test="($leiden-style = 'ddbdp' or $leiden-style = 'sammelbuch')">
             <xsl:choose>
                <xsl:when test="parent::t:subst"/>
                <xsl:when test="@place = 'above'">
@@ -86,10 +86,10 @@
             <xsl:apply-templates/>
             <xsl:text>]]</xsl:text>
          </xsl:when>
-         <xsl:when test="$leiden-style = 'ddbdp' and @rend='slashes'">
+         <xsl:when test="($leiden-style = 'ddbdp' or $leiden-style = 'sammelbuch') and @rend='slashes'">
             <xsl:apply-templates/>
          </xsl:when>
-         <xsl:when test="$leiden-style = 'ddbdp' and @rend='cross-strokes'">
+         <xsl:when test="($leiden-style = 'ddbdp' or $leiden-style = 'sammelbuch') and @rend='cross-strokes'">
             <xsl:apply-templates/>
          </xsl:when>
          <xsl:when test="parent::t:subst"/>
