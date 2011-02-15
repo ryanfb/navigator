@@ -9,46 +9,46 @@
   exclude-result-prefixes="xs dc rdf pi tei t xd"
   xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" version="2.0">
   
-  <xsl:import href="global-varsandparams.xsl"/>
+  <xsl:import href="../epidoc/global-varsandparams.xsl"/>
   
-  <xsl:import href="txt-teiab.xsl"/>
-  <xsl:import href="txt-teiapp.xsl"/>
-  <xsl:import href="txt-teidiv.xsl"/>
-  <xsl:import href="txt-teidivedition.xsl"/>
-  <xsl:import href="txt-teig.xsl"/>
-  <xsl:import href="txt-teigap.xsl"/>
-  <xsl:import href="txt-teihead.xsl"/>
-  <xsl:import href="txt-teilb.xsl"/>
-  <xsl:import href="txt-teilgandl.xsl"/>
-  <xsl:import href="txt-teilistanditem.xsl"/>
-  <xsl:import href="txt-teilistbiblandbibl.xsl"/>
-  <xsl:import href="txt-teimilestone.xsl"/>
-  <xsl:import href="txt-teinote.xsl"/>
-  <xsl:import href="txt-teip.xsl"/>
-  <xsl:import href="txt-teispace.xsl"/>
-  <xsl:import href="txt-teisupplied.xsl"/>
-  <xsl:import href="txt-teiref.xsl"/>
+  <xsl:import href="../epidoc/txt-teiab.xsl"/>
+  <xsl:import href="../epidoc/txt-teiapp.xsl"/>
+  <xsl:import href="../epidoc/txt-teidiv.xsl"/>
+  <xsl:import href="../epidoc/txt-teidivedition.xsl"/>
+  <xsl:import href="../epidoc/txt-teig.xsl"/>
+  <xsl:import href="../epidoc/txt-teigap.xsl"/>
+  <xsl:import href="../epidoc/txt-teihead.xsl"/>
+  <xsl:import href="../epidoc/txt-teilb.xsl"/>
+  <xsl:import href="../epidoc/txt-teilgandl.xsl"/>
+  <xsl:import href="../epidoc/txt-teilistanditem.xsl"/>
+  <xsl:import href="../epidoc/txt-teilistbiblandbibl.xsl"/>
+  <xsl:import href="../epidoc/txt-teimilestone.xsl"/>
+  <xsl:import href="../epidoc/txt-teinote.xsl"/>
+  <xsl:import href="../epidoc/txt-teip.xsl"/>
+  <xsl:import href="../epidoc/txt-teispace.xsl"/>
+  <xsl:import href="../epidoc/txt-teisupplied.xsl"/>
+  <xsl:import href="../epidoc/txt-teiref.xsl"/>
   
-  <xsl:import href="teiabbrandexpan.xsl"/>
-  <xsl:import href="teiaddanddel.xsl"/>
-  <xsl:import href="teichoice.xsl"/>
-  <xsl:import href="teiheader.xsl"/>
-  <xsl:import href="teihi.xsl"/>
-  <xsl:import href="teimilestone.xsl"/>
-  <xsl:import href="teinum.xsl"/>
-  <xsl:import href="teiorig.xsl"/>
-  <xsl:import href="teiq.xsl"/>
-  <xsl:import href="teiseg.xsl"/>
-  <xsl:import href="teisicandcorr.xsl"/>
-  <xsl:import href="teispace.xsl"/>
-  <xsl:import href="teisupplied.xsl"/>
-  <xsl:import href="teiunclear.xsl"/>
+  <xsl:import href="../epidoc/teiabbrandexpan.xsl"/>
+  <xsl:import href="../epidoc/teiaddanddel.xsl"/>
+  <xsl:import href="../epidoc/teichoice.xsl"/>
+  <xsl:import href="../epidoc/teiheader.xsl"/>
+  <xsl:import href="../epidoc/teihi.xsl"/>
+  <xsl:import href="../epidoc/teimilestone.xsl"/>
+  <xsl:import href="../epidoc/teinum.xsl"/>
+  <xsl:import href="../epidoc/teiorig.xsl"/>
+  <xsl:import href="../epidoc/teiq.xsl"/>
+  <xsl:import href="../epidoc/teiseg.xsl"/>
+  <xsl:import href="../epidoc/teisicandcorr.xsl"/>
+  <xsl:import href="../epidoc/teispace.xsl"/>
+  <xsl:import href="../epidoc/teisupplied.xsl"/>
+  <xsl:import href="../epidoc/teiunclear.xsl"/>
   
-  <xsl:import href="txt-tpl-apparatus.xsl"/>
+  <xsl:import href="../epidoc/txt-tpl-apparatus.xsl"/>
   
-  <xsl:import href="tpl-reasonlost.xsl"/>
-  <xsl:import href="tpl-certlow.xsl"/>
-  <xsl:import href="tpl-text.xsl"/>
+  <xsl:import href="../epidoc/tpl-reasonlost.xsl"/>
+  <xsl:import href="../epidoc/tpl-certlow.xsl"/>
+  <xsl:import href="../epidoc/tpl-text.xsl"/>
   
   <xsl:output method="xml" encoding="UTF-8" indent="yes" omit-xml-declaration="yes"/>
   
