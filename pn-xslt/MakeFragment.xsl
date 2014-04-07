@@ -15,7 +15,7 @@
   
   <!-- html related stylesheets, these may import tei{element} stylesheets if relevant eg. htm-teigap and teigap -->
   <xsl:import href="../epidoc/htm-teiab.xsl"/>
-  <xsl:import href="../epidoc/htm-teiaddanddel.xsl"/>
+  <xsl:import href="htm-teiaddanddel.xsl"/>
   <xsl:import href="../epidoc/htm-teiapp.xsl"/> 
   <xsl:import href="htm-teidiv.xsl"/>
   <xsl:import href="../epidoc/htm-teidivedition.xsl"/>
@@ -58,7 +58,7 @@
   
   <!-- html related stylesheets for named templates -->
   <xsl:import href="../epidoc/htm-tpl-cssandscripts.xsl"/>
-  <xsl:import href="../epidoc/htm-tpl-apparatus.xsl"/>
+  <xsl:import href="htm-tpl-apparatus.xsl"/>
   <xsl:import href="../epidoc/htm-tpl-lang.xsl"/>
   <xsl:import href="../epidoc/htm-tpl-metadata.xsl"/>
   <xsl:import href="../epidoc/htm-tpl-license.xsl"/>
