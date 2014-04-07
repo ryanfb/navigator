@@ -7,7 +7,7 @@
 
   <xsl:output method="text" encoding="UTF-8" indent="no" omit-xml-declaration="yes"/>
 
-  <xsl:include href="../epidoc/global-varsandparams.xsl"/>
+  <xsl:include href="global-varsandparams.xsl"/>
   
   <xsl:include href="../epidoc/txt-teiab.xsl"/>
   <xsl:include href="../epidoc/txt-teiapp.xsl"/>
@@ -27,7 +27,7 @@
   <xsl:include href="../epidoc/txt-teisupplied.xsl"/>
   <xsl:include href="../epidoc/txt-teiref.xsl"/>
   <xsl:include href="../epidoc/teiabbrandexpan.xsl"/>
-  <xsl:include href="../epidoc/teiaddanddel.xsl"/>
+  <xsl:include href="teiaddanddel.xsl"/>
   <xsl:include href="../epidoc/teicertainty.xsl"/>
   <xsl:include href="../epidoc/teichoice.xsl"/>
   <xsl:include href="../epidoc/teihandshift.xsl"/>
@@ -45,7 +45,7 @@
   <xsl:include href="../epidoc/teisurplus.xsl"/>
   <xsl:include href="../epidoc/teiunclear.xsl"/>
   
-  <xsl:include href="../epidoc/txt-tpl-apparatus.xsl"/>
+  <xsl:include href="txt-tpl-apparatus.xsl"/>
   <xsl:include href="../epidoc/txt-tpl-linenumberingtab.xsl"/>
   <xsl:include href="../epidoc/txt-tpl-sqbrackets.xsl"/>
   <xsl:include href="../epidoc/tpl-reasonlost.xsl"/>

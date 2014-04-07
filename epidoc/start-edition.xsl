@@ -69,7 +69,6 @@
    <xsl:include href="tpl-certlow.xsl"/>
    <xsl:include href="tpl-text.xsl"/>
 
-  <xsl:variable name="line-inc">5</xsl:variable>
 
 
    <!-- HTML FILE -->

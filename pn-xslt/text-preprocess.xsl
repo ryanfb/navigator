@@ -6,7 +6,7 @@
   exclude-result-prefixes="xs dc rdf pi tei t xd" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
   version="2.0">
 
-  <xsl:import href="../epidoc/global-varsandparams.xsl"/>
+  <xsl:import href="global-varsandparams.xsl"/>
 
   <xsl:output method="xml" encoding="UTF-8" indent="yes" omit-xml-declaration="yes"/>
 

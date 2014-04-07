@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- $Id: teispace.xsl 1636 2011-10-26 13:08:32Z gabrielbodard $ -->
+<!-- $Id: teispace.xsl 1725 2012-01-10 16:08:31Z gabrielbodard $ -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
    xmlns:t="http://www.tei-c.org/ns/1.0"
    xmlns:EDF="http://epidoc.sourceforge.net/ns/functions"
+  
    exclude-result-prefixes="t EDF" version="2.0">
    <!-- Found in [htm|txt]-teispace.xsl -->
 

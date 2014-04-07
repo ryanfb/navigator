@@ -109,7 +109,7 @@
       <xsl:apply-templates/>
       <xsl:call-template name="cert-low"/>
       <xsl:text>)</xsl:text>
-   </xsl:template>
-   
-   
+  </xsl:template>
+
+
 </xsl:stylesheet>

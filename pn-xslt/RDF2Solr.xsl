@@ -6,7 +6,7 @@
   exclude-result-prefixes="xs dc rdf pi tei t xd" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
   version="2.0">
 
-  <xsl:import href="../epidoc/global-varsandparams.xsl"/>
+  <xsl:import href="global-varsandparams.xsl"/>
 
   <xsl:import href="../epidoc/txt-teiab.xsl"/>
   <xsl:import href="../epidoc/txt-teiapp.xsl"/>
@@ -24,7 +24,7 @@
   <xsl:import href="../epidoc/txt-teisupplied.xsl"/>
   <xsl:import href="../epidoc/txt-teiref.xsl"/>
   <xsl:import href="../epidoc/teiabbrandexpan.xsl"/>
-  <xsl:import href="../epidoc/teiaddanddel.xsl"/>
+  <xsl:import href="teiaddanddel.xsl"/>
   <xsl:import href="../epidoc/teichoice.xsl"/>
   <xsl:import href="../epidoc/teiheader.xsl"/>
   <xsl:import href="../epidoc/teihi.xsl"/>
@@ -38,7 +38,7 @@
   <xsl:import href="../epidoc/teispace.xsl"/>
   <xsl:import href="../epidoc/teisupplied.xsl"/>
   <xsl:import href="../epidoc/teiunclear.xsl"/>
-  <xsl:import href="../epidoc/tpl-apparatus.xsl"/>
+  <xsl:import href="tpl-apparatus.xsl"/>
   <xsl:import href="../epidoc/txt-tpl-linenumberingtab.xsl"/>
   <xsl:import href="../epidoc/tpl-reasonlost.xsl"/>
   <xsl:import href="../epidoc/tpl-certlow.xsl"/>

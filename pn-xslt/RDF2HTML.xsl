@@ -10,21 +10,21 @@
   xmlns:sl="http://www.w3.org/2005/sparql-results#"
   version="2.0" exclude-result-prefixes="#all">
   
-  <xsl:import href="../epidoc/global-varsandparams.xsl"/>
+  <xsl:import href="global-varsandparams.xsl"/>
   <xsl:import href="morelikethis-varsandparams.xsl"/>
   
   <!-- html related stylesheets, these may import tei{element} stylesheets if relevant eg. htm-teigap and teigap -->
   <xsl:import href="../epidoc/htm-teiab.xsl"/>
   <xsl:import href="../epidoc/htm-teiaddanddel.xsl"/>
   <xsl:import href="../epidoc/htm-teiapp.xsl"/> 
-  <xsl:import href="../epidoc/htm-teidiv.xsl"/>
+  <xsl:import href="htm-teidiv.xsl"/>
   <xsl:import href="../epidoc/htm-teidivedition.xsl"/>
   <xsl:import href="htm-teiemph.xsl"/>
   <xsl:import href="../epidoc/htm-teiforeign.xsl"/>
   <xsl:import href="../epidoc/htm-teifigure.xsl"/>
   <xsl:import href="../epidoc/htm-teig.xsl"/>
   <xsl:import href="../epidoc/htm-teigap.xsl"/>
-  <xsl:import href="../epidoc/htm-teihead.xsl"/>
+  <xsl:import href="htm-teihead.xsl"/>
   <xsl:import href="../epidoc/htm-teihi.xsl"/>
   <xsl:import href="../epidoc/htm-teilb.xsl"/>
   <xsl:import href="../epidoc/htm-teilgandl.xsl"/>
@@ -38,7 +38,7 @@
   <xsl:import href="../epidoc/htm-teispace.xsl"/>
   <xsl:import href="../epidoc/htm-teisupplied.xsl"/>
   <xsl:import href="../epidoc/htm-teiterm.xsl"/>
-  <xsl:import href="../epidoc/htm-teiref.xsl"/>
+  <xsl:import href="htm-teiref.xsl"/>
   
   <!-- tei stylesheets that are also used by start-txt -->
   <xsl:import href="../epidoc/teiabbrandexpan.xsl"/>

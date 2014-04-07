@@ -1,4 +1,4 @@
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+﻿XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 XXX     README.txt for example-p5-xslt              XXX
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
@@ -18,6 +18,23 @@ Technical requirements:
 	These scripts are written in XSLT 2.0 and may be transformed using any
 	conformant XSLT processor. (Tested with Saxon-HE™ 9.2.0.6.)
 
+How to obtain the stylesheets:
+
+	Two methods:
+
+	(1) check out from the EpiDoc Subversion repository. On a Mac or Linux machine
+	with Subversion installed, simply create a directory into which you want to check
+	out the xslt, and then on the command-line enter:
+
+	svn checkout https://epidoc.svn.sourceforge.net/svnroot/epidoc/trunk/example-p5-xslt your_directory
+
+	On Windows, using a client such as TortoiseSVN or Oxygen's SynchroSVN, check out
+	the repo from https://epidoc.svn.sourceforge.net/svnroot/epidoc/trunk/example-p5-xslt
+	to your local repository.
+
+	(2) download the latest packaged, stable release from the SourceForge repository at
+	https://sourceforge.net/projects/epidoc/files/epidoc-xsl/
+
 How to use it:
 
 	XSLT may be run on an individual EpiDoc XML file, creating a single file output
@@ -35,27 +52,37 @@ How to use it:
 
 	The parameters currently defined include:
 
+	$apparatus-style:
+		values are 'default' (generate apparatus from tei:div[@type='apparatus'])
+		and 'ddbdp' (generate apparatus from tei:app, tei:subst, tei:choice,
+		tei:hi etc. elements in the text.
+	$css-loc
+		value is '../xsl/global.css'. Path of CSS file referenced in
+		the resulting HTML file.
+	$docroot
+		value is '../output/data'
+	$edition-type:
+		values are 'interpretive' (default) and 'diplomatic' (prints edition
+		in uppercase, no restored, corrected, expanded characters, etc.)
+	$edn-structure
+		values are 'default', 'ddbdp', 'hgv', 'london', 'petrae-en',
+		'petrae-fr', 'petrae-ru', and 'sammelbuch'
+	$hgv-gloss
+		value is '../../../xml/idp.data/trunk/HGV_trans_EpiDoc/glossary.xml'.
+		Location of HGV glossary file relative to the current file.
 	$leiden-style:
-		values include 'panciera' (default), 'ddbdp', 'london',
-		'edh-web' (and 'edh-itx', 'edh-names'). These change minor
+		values include 'panciera' (default), 'ddbdp', 'dohnicht',
+		'edh-web' (and 'edh-itx', 'edh-names'), 'ila', 'london',
+		'petrae', 'rib', 'seg', and 'sammelbuch'. These change minor
 		variations in local Leiden usage; brackets for corrected text,
 		display of previously read text, illegible characters, etc.
-	$meta-style:
-		values are 'default' (displays only XML div content in HTML)
-		and 'hgv' (extracts metadata from teiHeader and renders as
-		expected by the HGV database)
+	$line-inc:
+		default value = 5, may be locally defined to any integer value
+	$topNav
+		values are 'default' and 'ddbdp'
 	$verse-lines:
 		values are 'off' (default), and 'on' (when a text of section of
 		text is tagged using <lg> and <l> elements [instead of <ab>] then
 		edition is formatted and numbered in verse lines rather than
 		epigraphic lines)
-	$edition-type:
-		values are 'interpretive' (default) and 'diplomatic' (prints edition
-		in uppercase, no restored, corrected, expanded characters, etc.)
-	$apparatus-style:
-		values are 'default' (generate apparatus from tei:div[@type='apparatus'])
-		and 'ddbdp' (generate apparatus from tei:app, tei:subst, tei:choice,
-		tei:hi etc. elements in the text.
-	$line-increment:
-		default value = 5, may be locally defined to any integer value
 

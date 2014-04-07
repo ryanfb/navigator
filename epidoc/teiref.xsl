@@ -102,5 +102,5 @@
       <xsl:if test="$fol-val = 'yes'">
          <xsl:text> | </xsl:text>
       </xsl:if>
-   </xsl:template>
+  </xsl:template>
 </xsl:stylesheet>

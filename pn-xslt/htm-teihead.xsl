@@ -6,9 +6,9 @@
   
   
   <xsl:template match="t:div/t:head">
-      <h3>
+      <h2>
          <xsl:apply-templates/>
-      </h3>
+      </h2>
   </xsl:template>
    
    <xsl:template match="t:body/t:head">

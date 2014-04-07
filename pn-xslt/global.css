@@ -1,3 +1,5 @@
+@import url("http://papyri.info/pi.css");
+
 .latinnum {
     border-top: thin black solid;
      }
@@ -42,18 +44,6 @@
     position: absolute;
     }
     
-.linenumberbroken {
-    left: -4em;
-    padding-right: 0.2em;
-    position: absolute;
-    color: red ;
-    text-decoration: blink ;
-    }
-    
-.petraeligature {
-    text-decoration: underline;
-    }
-    
 .underline {
     text-decoration: underline;
     }
@@ -61,7 +51,3 @@
 .italic {
     font-style: italic;
     }
-    
-h4.slimmer {
-    margin-bottom: -0.5em;
-}    
