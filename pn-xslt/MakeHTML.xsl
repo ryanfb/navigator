@@ -9,65 +9,65 @@
   xmlns:xi="http://www.w3.org/2001/XInclude"
   xmlns:sl="http://www.w3.org/2005/sparql-results#"
   version="2.0" exclude-result-prefixes="#all">
-  
+
   <xsl:import href="pi-global-varsandparams.xsl"/>
   <xsl:import href="morelikethis-varsandparams.xsl"/>
   
   <!-- html related stylesheets, these may import tei{element} stylesheets if relevant eg. htm-teigap and teigap -->
-  <xsl:import href="htm-teiab.xsl"/>
-  <xsl:import href="htm-teiaddanddel.xsl"/>
-  <xsl:import href="htm-teiapp.xsl"/> 
-  <xsl:import href="htm-teidiv.xsl"/>
-  <xsl:import href="htm-teidivedition.xsl"/>
+  <xsl:import href="../epidoc/htm-teiab.xsl"/>
+  <xsl:import href="../epidoc/htm-teiaddanddel.xsl"/>
+  <xsl:import href="../epidoc/htm-teiapp.xsl"/> 
+  <xsl:import href="../epidoc/htm-teidiv.xsl"/>
+  <xsl:import href="../epidoc/htm-teidivedition.xsl"/>
   <xsl:import href="htm-teiemph.xsl"/>
-  <xsl:import href="htm-teiforeign.xsl"/>
-  <xsl:import href="htm-teifigure.xsl"/>
-  <xsl:import href="htm-teig.xsl"/>
-  <xsl:import href="htm-teigap.xsl"/>
-  <xsl:import href="htm-teihead.xsl"/>
-  <xsl:import href="htm-teihi.xsl"/>
-  <xsl:import href="htm-teilb.xsl"/>
-  <xsl:import href="htm-teilgandl.xsl"/>
-  <xsl:import href="htm-teilistanditem.xsl"/>
-  <xsl:import href="htm-teilistbiblandbibl.xsl"/>
-  <xsl:import href="htm-teimilestone.xsl"/>
-  <xsl:import href="htm-teinote.xsl"/>
-  <xsl:import href="htm-teinum.xsl"/>
-  <xsl:import href="htm-teip.xsl"/>
-  <xsl:import href="htm-teiseg.xsl"/>
-  <xsl:import href="htm-teispace.xsl"/>
-  <xsl:import href="htm-teisupplied.xsl"/>
-  <xsl:import href="htm-teiterm.xsl"/>
-  <xsl:import href="htm-teiref.xsl"/>
+  <xsl:import href="../epidoc/htm-teiforeign.xsl"/>
+  <xsl:import href="../epidoc/htm-teifigure.xsl"/>
+  <xsl:import href="../epidoc/htm-teig.xsl"/>
+  <xsl:import href="../epidoc/htm-teigap.xsl"/>
+  <xsl:import href="../epidoc/htm-teihead.xsl"/>
+  <xsl:import href="../epidoc/htm-teihi.xsl"/>
+  <xsl:import href="../epidoc/htm-teilb.xsl"/>
+  <xsl:import href="../epidoc/htm-teilgandl.xsl"/>
+  <xsl:import href="../epidoc/htm-teilistanditem.xsl"/>
+  <xsl:import href="../epidoc/htm-teilistbiblandbibl.xsl"/>
+  <xsl:import href="../epidoc/htm-teimilestone.xsl"/>
+  <xsl:import href="../epidoc/htm-teinote.xsl"/>
+  <xsl:import href="../epidoc/htm-teinum.xsl"/>
+  <xsl:import href="../epidoc/htm-teip.xsl"/>
+  <xsl:import href="../epidoc/htm-teiseg.xsl"/>
+  <xsl:import href="../epidoc/htm-teispace.xsl"/>
+  <xsl:import href="../epidoc/htm-teisupplied.xsl"/>
+  <xsl:import href="../epidoc/htm-teiterm.xsl"/>
+  <xsl:import href="../epidoc/htm-teiref.xsl"/>
   
   <!-- tei stylesheets that are also used by start-txt -->
-  <xsl:import href="teiabbrandexpan.xsl"/>
-  <xsl:import href="teicertainty.xsl"/>
-  <xsl:import href="teichoice.xsl"/>
-  <xsl:import href="teihandshift.xsl"/>
-  <xsl:import href="teiheader.xsl"/>
-  <xsl:import href="teimilestone.xsl"/>
-  <xsl:import href="teiorig.xsl"/>
-  <xsl:import href="teiorigandreg.xsl"/>
-  <xsl:import href="teiq.xsl"/>
-  <xsl:import href="teisicandcorr.xsl"/>
-  <xsl:import href="teispace.xsl"/>
-  <xsl:import href="teisupplied.xsl"/>
-  <xsl:import href="teisurplus.xsl"/>
-  <xsl:import href="teiunclear.xsl"/>
+  <xsl:import href="../epidoc/teiabbrandexpan.xsl"/>
+  <xsl:import href="../epidoc/teicertainty.xsl"/>
+  <xsl:import href="../epidoc/teichoice.xsl"/>
+  <xsl:import href="../epidoc/teihandshift.xsl"/>
+  <xsl:import href="../epidoc/teiheader.xsl"/>
+  <xsl:import href="../epidoc/teimilestone.xsl"/>
+  <xsl:import href="../epidoc/teiorig.xsl"/>
+  <xsl:import href="../epidoc/teiorigandreg.xsl"/>
+  <xsl:import href="../epidoc/teiq.xsl"/>
+  <xsl:import href="../epidoc/teisicandcorr.xsl"/>
+  <xsl:import href="../epidoc/teispace.xsl"/>
+  <xsl:import href="../epidoc/teisupplied.xsl"/>
+  <xsl:import href="../epidoc/teisurplus.xsl"/>
+  <xsl:import href="../epidoc/teiunclear.xsl"/>
   
   <!-- html related stylesheets for named templates -->
-  <xsl:import href="htm-tpl-cssandscripts.xsl"/>
-  <xsl:import href="htm-tpl-apparatus.xsl"/>
-  <xsl:import href="htm-tpl-lang.xsl"/>
-  <xsl:import href="htm-tpl-metadata.xsl"/>
-  <xsl:import href="htm-tpl-license.xsl"/>
+  <xsl:import href="../epidoc/htm-tpl-cssandscripts.xsl"/>
+  <xsl:import href="../epidoc/htm-tpl-apparatus.xsl"/>
+  <xsl:import href="../epidoc/htm-tpl-lang.xsl"/>
+  <xsl:import href="../epidoc/htm-tpl-metadata.xsl"/>
+  <xsl:import href="../epidoc/htm-tpl-license.xsl"/>
   <!-- global named templates with no html, also used by start-txt -->
-  <xsl:import href="tpl-reasonlost.xsl"/>
-  <xsl:import href="tpl-certlow.xsl"/>
-  <xsl:import href="tpl-text.xsl"/>
-  <xsl:include href="htm-tpl-sqbrackets.xsl"/>
-  <xsl:include href="htm-tpl-structure.xsl"/>
+  <xsl:import href="../epidoc/tpl-reasonlost.xsl"/>
+  <xsl:import href="../epidoc/tpl-certlow.xsl"/>
+  <xsl:import href="../epidoc/tpl-text.xsl"/>
+  <xsl:include href="../epidoc/htm-tpl-sqbrackets.xsl"/>
+  <xsl:include href="../epidoc/htm-tpl-structure.xsl"/>
   <xsl:include href="metadata.xsl"/>
   <xsl:key name="lang-codes" match="//pi:lang-codes-to-expansions" use="@code"></xsl:key>
   <xsl:param name="collection"/>
