@@ -24,7 +24,7 @@ License:
 Technical requirements:
 
 	These scripts are written in XSLT 2.0 and may be transformed using any
-	conformant XSLT processor. (Tested with Saxon-HE√¥ 9.2.0.6.)
+	conformant XSLT processor. (Tested with Saxon-HEô 9.2.0.6.)
 
 How to obtain the stylesheets:
 
@@ -46,9 +46,9 @@ How to obtain the stylesheets:
 How to use it:
 
 	XSLT may be run on an individual EpiDoc XML file, creating a single file output
-	(e.g. via a command-line Saxon√¥ call or an Oxygen√¥ transformation scenario)
+	(e.g. via a command-line Saxonô call or an Oxygenô transformation scenario)
 	or batch-run upon a large collection of files via some other process (e.g. an
-	Oxygen√¥ project, set of batch files, etc.). Call the start-edition.xsl stylesheet to create
+	Oxygenô project, set of batch files, etc.). Call the start-edition.xsl stylesheet to create
 	a HTML version of the output (this xsl calls both generic and specialized files needed),
 	or start-txt.xsl to create a text-only version of the text output.
 

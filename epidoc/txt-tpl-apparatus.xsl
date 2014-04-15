@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- $Id: txt-tpl-apparatus.xsl 1674 2011-12-05 15:48:48Z rviglianti $ -->
+<!-- $Id: txt-tpl-apparatus.xsl 2163 2014-04-10 20:01:04Z hcayless $ -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:t="http://www.tei-c.org/ns/1.0"
                 version="2.0">
